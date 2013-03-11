@@ -1,0 +1,23 @@
+<h1>Listing documents</h1>
+
+<table class="table table-striped">
+
+  <thead>
+    <tr>
+        <th>Description</th>
+        <th></th>
+        <th></th>
+        <th></th>
+    </tr>
+  </thead>
+    <tbody>
+    <% @documents.each do |document| %>
+        <%= render @documents %>
+
+    <% end %>
+    </tbody>
+</table>
+
+<br />
+
+<%= link_to 'New Document', new_document_path %>

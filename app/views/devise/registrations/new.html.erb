@@ -5,11 +5,20 @@
 <%= devise_error_messages! %>
 
 
- <%= f.input :firstn %>
+ <%= f.input :firstn, label: "First Name" %>
 
- <%= f.input :lastn %>
-
+ <%= f.input :lastn, label: "Last Name"%>
+ <%=  f.input :type, label: "User Type",  as: :radio_buttons , collection: ["Consultant", "Business"] %>
  <%= f.input :email %>
+
+
+ <%= f.input :addressl2,  label: "Address" %>
+ <%=  f.input :addressl2, label: "Address line 2" %>
+ <%=  f.input :city %>
+ <%=  f.input :state %>
+ <%=  f.input :zip %>
+
+
  <%= f.input :password %>
  <%= f.input :password_confirmation %>
  <%= f.input :remember_me, as: :boolean %>
