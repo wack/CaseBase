@@ -7,19 +7,41 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </a>
-             <%=link_to 'Colaris', root_path, class:"brand" %>
 
-                <div class="nav-collapse">
+
+                <div class="nav-collapse ">
                     <ul class="nav">
+
+                        <li>
+
+                          <%=link_to 'Colaris', root_path, class:"brand" %>
+                        </li>
+
                         <li>
 							<%=link_to 'Home', root_path %>
 						</li>
-						<li>
-							<%= link_to 'Consultants', '#' %> 
+						<li class="dropdown">
+
+                          <a class="dropdown-toggle" data-toggle="dropdown" href="#">Consultants</a>
+                            <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+                               <li> <%= link_to "Find Consultants" , href="#"%></li>
+                               <li> <%= link_to "Search Consultants", href="#" %></li>
+
+                            </ul>
+
 						</li>
-						<li>
-							<%= link_to 'Cases', '#', %>
-						</li>
+                      <li class="dropdown">
+
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Cases</a>
+                        <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+                          <li> <%= link_to "Find a Case" , href="#"%></li>
+                          <li> <%= link_to "Post a Case", href="#" %></li>
+                          <% if user_signed_in? %>
+                          <li> <%= link_to "My Cases", href="#" %></li>
+                          <%end %>
+                        </ul>
+
+                      </li>
 						<li>
 							<%= link_to 'About Colaris', about_path%>
 						</li>
@@ -29,8 +51,19 @@
 					</ul>
                     <ul class="nav pull-right">
                         <% if user_signed_in? %>
-                            <li><%= link_to 'Logout',  destroy_user_session_path, method: :delete %></li>
-                            <li><%= link_to 'Edit Profile', edit_user_registration_path %></li>
+                          <li class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">Account</a>
+                            <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+                              <li> <%= link_to "Recent Activity" , href="#"%></li>
+                              <li> <%= link_to "My Cases", href="#" %></li>
+                              <li> <%= link_to "My Network", href='#' %></li>
+                              <li> <%=  link_to "My Documents",  %></li>
+
+                            </ul>
+                          </li>
+
+                            <li class="dropdown"><%= link_to 'Logout',  destroy_user_session_path, method: :delete %></li>
+                            <li><%= link_to 'Edit Profile', edit_user_registration_path,  %></li>
                         <% else  %>
                             <li><%= link_to 'Login',  new_user_session_path %></li>
                             <li><%= link_to 'Create an Account', new_user_registration_path %> </li>
