@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f99607ec-d7a8-4ddf-9f53-d556583d2c34" name="Default" comment="" />
+    <list default="true" id="f99607ec-d7a8-4ddf-9f53-d556583d2c34" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/user.rb" afterPath="$PROJECT_DIR$/app/models/user.rb" />
+    </list>
     <ignored path="CaseBase.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/Dummy.txt" changelist="f99607ec-d7a8-4ddf-9f53-d556583d2c34" time="1363015944819" ignored="false" />
@@ -16,7 +18,7 @@
     <file path="/_navbar.html.erb" changelist="f99607ec-d7a8-4ddf-9f53-d556583d2c34" time="1363023576202" ignored="false" />
     <file path="/new.html.erb" changelist="f99607ec-d7a8-4ddf-9f53-d556583d2c34" time="1362975193451" ignored="false" />
     <file path="/edit.html.erb" changelist="f99607ec-d7a8-4ddf-9f53-d556583d2c34" time="1362970525859" ignored="false" />
-    <file path="/user.rb" changelist="f99607ec-d7a8-4ddf-9f53-d556583d2c34" time="1362978801985" ignored="false" />
+    <file path="/user.rb" changelist="f99607ec-d7a8-4ddf-9f53-d556583d2c34" time="1363027777149" ignored="false" />
     <file path="/_form.html.erb" changelist="f99607ec-d7a8-4ddf-9f53-d556583d2c34" time="1362979042430" ignored="false" />
     <file path="/show.html.erb" changelist="f99607ec-d7a8-4ddf-9f53-d556583d2c34" time="1362979162755" ignored="false" />
     <file path="/document.rb" changelist="f99607ec-d7a8-4ddf-9f53-d556583d2c34" time="1362976868581" ignored="false" />
@@ -107,10 +109,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="database.yml" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="database.yml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/config/database.yml">
           <provider selected="true" editor-type-id="text-editor">
             <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="user.rb" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/models/user.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="4" column="76" selection-start="254" selection-end="254" vertical-scroll-proportion="0.1056338">
               <folding />
             </state>
           </provider>
@@ -120,15 +131,6 @@
         <entry file="file://$PROJECT_DIR$/app/controllers/documents_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
             <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.html.erb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/home/index.html.erb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="13" column="25" selection-start="668" selection-end="668" vertical-scroll-proportion="-8.125">
               <folding />
             </state>
           </provider>
@@ -159,7 +161,6 @@
       <list>
         <option value="$PROJECT_DIR$/app/views/layouts/application.html.erb" />
         <option value="$PROJECT_DIR$/Gemfile" />
-        <option value="$PROJECT_DIR$/app/models/user.rb" />
         <option value="$PROJECT_DIR$/app/models/reference.rb" />
         <option value="$PROJECT_DIR$/app/views/references/_form.html.erb" />
         <option value="$PROJECT_DIR$/app/views/references/_reference.html.erb" />
@@ -173,6 +174,7 @@
         <option value="$PROJECT_DIR$/app/views/layouts/_footer.html.erb" />
         <option value="$PROJECT_DIR$/app/views/layouts/_navbar.html.erb" />
         <option value="$PROJECT_DIR$/app/controllers/user_controller_controller.rb" />
+        <option value="$PROJECT_DIR$/app/models/user.rb" />
       </list>
     </option>
   </component>
@@ -300,6 +302,24 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="devise" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CaseBase" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CaseBase" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="models" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -727,15 +747,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/application.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/images/consulting.png">
       <provider selected="true" editor-type-id="images">
         <state />
@@ -835,6 +846,13 @@
     <entry file="file://$PROJECT_DIR$/config/database.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/user.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="76" selection-start="254" selection-end="254" vertical-scroll-proportion="0.1056338">
           <folding />
         </state>
       </provider>
