@@ -11,12 +11,26 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130311030208) do
+ActiveRecord::Schema.define(:version => 20130311051232) do
 
   create_table "documents", :force => true do |t|
     t.string   "description"
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
+    t.integer  "user_id"
+  end
+
+  add_index "documents", ["user_id"], :name => "index_documents_on_user_id"
+
+  create_table "references", :force => true do |t|
+    t.string   "firstN"
+    t.string   "lastN"
+    t.string   "email"
+    t.string   "phone"
+    t.text     "description"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+    t.string   "user_id"
   end
 
 # Could not dump table "users" because of following StandardError

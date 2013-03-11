@@ -1,4 +1,7 @@
 CaseBase::Application.routes.draw do
+  resources :references
+
+
   resources :documents
 
 

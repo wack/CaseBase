@@ -1,8 +1,11 @@
 class DocumentsController < ApplicationController
   # GET /documents
   # GET /documents.json
+
+  before_filter :authenticate_user!
+
   def index
-    @documents = Document.all
+    @documents = current_user.documents.all
 
     respond_to do |format|
       format.html # index.html.erb
@@ -24,7 +27,7 @@ class DocumentsController < ApplicationController
   # GET /documents/new
   # GET /documents/new.json
   def new
-    @document = Document.new
+    @document = current_user.documents.new
 
     respond_to do |format|
       format.html # new.html.erb
@@ -40,7 +43,7 @@ class DocumentsController < ApplicationController
   # POST /documents
   # POST /documents.json
   def create
-    @document = Document.new(params[:document])
+    @document = current_user.documents.new(params[:document])
 
     respond_to do |format|
       if @document.save
