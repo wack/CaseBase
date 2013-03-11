@@ -1,0 +1,31 @@
+
+<p>
+  <b>First Name:</b>
+  <%= @reference.firstN %>
+</p>
+
+<p>
+  <b>Last Name:</b>
+  <%= @reference.lastN %>
+</p>
+
+<p>
+  <b>Email:</b>
+  <%= @reference.email %>
+</p>
+
+<p>
+  <b>Phone Number:</b>
+  <%= @reference.phone %>
+</p>
+
+<p>
+  <b>Relation:</b>
+  <%= @reference.description %>
+</p>
+
+
+
+
+<%= link_to 'Edit', edit_reference_path(@reference) %> |
+<%= link_to 'Back', references_path %>

@@ -1,0 +1,28 @@
+<h1>Listing references</h1>
+
+<table class="table table-striped">
+  <thead>
+  <tr>
+    <th>Firstn</th>
+    <th>Lastn</th>
+    <th>Email</th>
+    <th>Phone</th>
+    <th>Description</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+  </thead>
+
+  <tbody>
+<% @references.each do |reference| %>
+<%=	render @references %>
+
+<% end %>
+
+  </tbody>
+</table>
+
+<br />
+
+<%= link_to 'New Reference', new_reference_path %>
